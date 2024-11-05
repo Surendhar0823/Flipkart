@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <script>
+        window.addEventListener('load',function(){
+            let email=localStorage.getItem('email');
+            if(email){
+                document.getElementById('email').value=email;
+            }
+        });
+        function logout(){
+            localStorage.removeItem('email');
+            window.location.href= "task.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <h1><i>FlipKart</i><sub>Lower Pricer</sub></h1>
+            
+
+        </div>
+        <div class="out">
+            <button class="logout l1" id="logout" onclick="logout()">Logout</button>
+        </div>
+    </div>
+        <div class="notification">
+            <div class="image">
+                <img class="image" src="./9187604.png" alt="user png">
+            </div>
+            <div class="info">
+            <a href="">Home</a>
+            <a href="">Contant</a>
+            <a href="">Service</a>
+            <a href="">About</a>
+            <button class="logout " id="logout" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <img src="" alt="">
+
+    </div>
+    <div class="container1">
+        <div class="content1">
+            
+        </div>
+        <div class="content2"></div>
+    </div>
+</body>
+</html>
