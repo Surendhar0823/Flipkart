@@ -16,6 +16,24 @@
             localStorage.removeItem('email');
             window.location.href= "task.html";
         }
+        function loadpage(page){
+            if(page==='home'){
+                document.getElementById('content').innerHTML="<object type=text/html data=dashboard.html></object>";
+            }
+            else if (page==='product'){
+                document.getElementById('content').innerHTML="<object type=text/html data=product.html></object>";
+            }
+            else if (page==='service'){
+                document.getElementById('content').innerHTML="<object type=text/html data=service.html></object>";
+            }
+            else if (page==='about'){
+                document.getElementById('content').innerHTML="<object type=text/html data=about.html></object>";
+            }
+            else{
+                console.log("page not Found 404")
+            }
+
+        }
     </script>
 </head>
 <body>
@@ -29,28 +47,24 @@
             <button class="logout l1" id="logout" onclick="logout()">Logout</button>
         </div>
     </div>
-        <div class="notification">
-            <div class="image">
-                <img class="image" src="./9187604.png" alt="user png">
+        <div class="container">
+            <div class="notification">
+                <div class="image">
+                    <img class="image" src="./image/9187604.png" alt="user png">
+                </div>
+                <div class="info">
+                <button class="logout" onclick="loadpage('home')">Home</button>
+                <button class="logout" onclick="loadpage('product')">Product</button>
+                <button class="logout" onclick="loadpage('service')">Service</button>
+                <button class="logout" onclick="loadpage('about')">About</button>
+                <button class="logout l2 " id="logout" onclick="logout()">Logout</button>
+                </div>
             </div>
-            <div class="info">
-            <a href="">Home</a>
-            <a href="">Contant</a>
-            <a href="">Service</a>
-            <a href="">About</a>
-            <button class="logout " id="logout" onclick="logout()">Logout</button>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <img src="" alt="">
+            <div class="bodycontent" id="content">
+                <p</p>
 
-    </div>
-    <div class="container1">
-        <div class="content1">
-            
+            </div>
         </div>
-        <div class="content2"></div>
-    </div>
+    
 </body>
 </html>
