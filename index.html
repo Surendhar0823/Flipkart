@@ -4,33 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<script>
-    function handclick() {
+    <link rel="stylesheet" href="./css/style.css"> 
+    <script src="https://kit.fontawesome.com/1a6bb5e6a0.js" crossorigin="anonymous"></script>
+
+       <script>
+         function handclick() {
         let email=document.getElementById('email').value;
         let password=document.getElementById('password').value;
 
         if((email==='admin@gmail.com') &&( password==="admin")){
-            alert('login Success');
-            document.getElementById('message').innerHTML ='login sucess'
-            document.getElementById('message').style.background ='red'
-            document.getElementById('message').innerHTML ='login faild'
+            localStorage.setItem('email',email);
+            window.location.href='dashboard.html'
+            
         }
         else{
-            alert('login faild')    
-        }
-          
-        
-    }
+            document.getElementById('message').innerHTML ='Please check your email and password';
+            document.getElementById('message').style.color='red'
 
-</script>
+        }
+        }
+    </script>
+</head>
 <body>
-    <div id="message"></div>
-    <form action="">
-        <input type="email" id="email" name="email" placeholder="Enter your Email" required>
-        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-    </form>
-    <button onclick=" handclick() " >Login</button>
+    <div class="container">
+        <h2>LOGIN PAGE</h2>
+        <div class="login">
+            <form action="">
+                <label for="email">UserName</label>
+                <input  class="txt" placeholder="Enter your E-mail" type="email" name="email" id="email">
+                <label for="password">Password</label>
+                <input   class="txt" placeholder="Enter your Password" type="password" name="password" id="password">
+                <div class="remember">
+                    <div class="check">
+                        <input type="checkbox" name="check" id="check"><span>Remember Me</span>
+                    </div>
+                    <div>
+                        <a href="#">forget password</a>
+                    </div>
+                    
+                </div>
+                <div id="message"></div>
+                <div class="button">
+                    <button class="btn" type="button" onclick="handclick()">Login In</button>
+
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="media">
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+    </div>
     
 </body>
 </html>
