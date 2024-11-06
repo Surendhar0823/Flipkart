@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* color: white; */
     
 
 }
@@ -20,7 +21,7 @@ sub{
     /* height: 6vh; */
     display: flex;
     justify-content:space-between;
-    background-color: #63a4e0;
+    background-color: lightcoral;
     padding: 10px 0px;
    
 
@@ -43,8 +44,9 @@ sub{
     display: flex;
     flex-direction:column;
     align-items:center;
-    background-color: #04325e;
-    width: 10%;
+    
+    background-color: lightcoral;
+    width: 30%;
     gap: 10px;
     padding: 5px 2px;
     height: 100vh;
@@ -64,17 +66,17 @@ button{
     border-radius: 20px;
 }
 button:hover{
-    background-color: #63a4e0;
+    background-color: lightgoldenrodyellow;
     color: black;
 }
 .logout{
-    background-color: #04325e;
+    background-color: lightcoral;
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
 }
 .l1{
-    background-color: #63a4e0;
+    background-color: lightgoldenrodyellow;
     position: relative;
     /* bottom: 20px; */
 }
@@ -84,11 +86,11 @@ button:hover{
 }
 
 .logout:hover{
-    background-color: #63a4e0;
+    background-color: lightgoldenrodyellow;
     color: black;
 }
 .l1:hover{
-    background-color: #04325e;
+    background-color: lightcoral;
     color:white
 }   
 
