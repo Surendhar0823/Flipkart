@@ -17,21 +17,28 @@
             window.location.href= "index.html";
         }
         function loadpage(page){
-            if(page==='home'){
+            switch(page){
+                
+            case 'home':
                 document.getElementById('content').innerHTML="<object type=text/html data=home.html style=width:100vw;height:100vh></object>";
-            }
-            else if (page==='product'){
-                document.getElementById('content').innerHTML="<object type=text/html data=product.html style=width:100vw;height:100vh></object>";
-            }
-            else if (page==='service'){
+                break;
+            
+            case 'product':
+                document.getElementById('content').innerHTML="<object type=text/html data=product.html style=width:80vw;height:100vh></object>";
+                break;
+            
+            case 'service':
                 document.getElementById('content').innerHTML="<object type=text/html data=service.html style=width:100vw;height:100vh></object>";
-            }
-            else if (page==='about'){
+                break;
+            
+            case'about':
                 document.getElementById('content').innerHTML="<object type=text/html data=about.html style=width:100vw;height:100vh></object>";
-            }
-            else{
+                break;
+            
+            default:
                 console.log("page not Found 404")
-            }
+            
+        }
 
         }
     </script>
